@@ -1,0 +1,56 @@
+<b> Carlos Alexandre </b>
+
+Máquinas:
+<br>♦ Computador Câmara de Vereadores
+<br>♦ Computador EPD
+<br>♦ Computador FAETEC
+<br>♦ Computador Casa
+<br>
+<br>
+<br>Softwares:
+<br>♦ Netbeans IDE 7.0 e 7.0.1
+<br>♦ DB Designer
+<br>♦ Notepad++
+<br>
+<br>Fonte de Pesquisa:
+<br>♦ www.devmedia.com.br
+<br>♦ www.guj.com.br
+<br>♦ www.imaster.com.br
+<br>♦ Apostila Caleum Java JF11
+<br>
+<br>♦Papeis Rascunhos
+
+<p>----------------------------------------------------------------
+<br>
+<br><b>João Paulo</b>
+<br>Máquinas:
+<br>♦ Computador Faetec
+<br>♦ Computador TechData
+<br>♦ Computador Casa
+<br>
+<br>
+<br>Softwares:
+<br>♦ Netbeans IDE 7.0.1
+<br>
+
+<p>----------------------------------------------------------------
+
+<b> Cláudia Rocha</b>
+
+Máquinas:
+<br>♦ Computador FAETEC
+<br>♦ Computador Casa
+<br>
+<br>
+<br>Softwares:
+<br>♦ Netbeans IDE 7.0 e 7.0.1
+<br>♦ DB Designer
+<br>♦ Notepad++
+<br>
+<br>Fonte de Pesquisa:
+<br>♦ www.devmedia.com.br
+<br>♦ www.guj.com.br
+<br>♦ www.imaster.com.br
+<br>♦ Apostila Caleum Java JF11
+<br>
+<br>♦Papeis Rascunhos

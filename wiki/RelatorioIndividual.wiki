@@ -1,0 +1,110 @@
+= João Paulo Lopes =
+
+|| Data || Local || Descrição ||
+||23/10/11|| Casa || Pesquisa do CSS que será usado no template do site do projeto final.|| 
+||25/10/11 ||Casa ||Implementação do código CSS do site do projeto final ao repositório.||
+||26/10/11||Faetec||Alterações ortográficas no minimundo.||
+
+== 3º Marco ==
+
+|| Data || Local || Descrição ||
+||03/11/11||Faetec||Envio de códigos implementados ao repositório, envio de lista de recursos utilizados e correção no repositótio subversion ||
+||23/11/11||Faetec||Pesquisa de conteúdo para implementação da página "duvidas" e "fale conosco" do site do projeto final ||
+||24/11/11||Casa||Criação da página "Dúvidas" do site||
+||26/11/11||Casa||Criação da página "Fale conosco" do site||
+||27/11/11||Casa||Criação da apresentação de slides para o projeto final||
+
+== 4º Marco ==
+
+|| Data || Local || Descrição ||
+||29/11/2011||Faetec||Criação da página "Emprestimos" do site||
+||29/11/2011||Faetec||Alteração na página "fale conosco" do site||
+||31/11/2011||Faetec||Criação da página "Mapa" do site||
+||31/11/2011||Faetec||Criação da página "Quem Somos" do site||
+
+= Carlos Alexandre =
+= 1° Marco =
+|| Data || Local || Descrição ||
+||10/10/2011|| Casa || Criação do projeto financeiro no repositório Subversion.|| 
+||11/10/2011 ||Laboratório FAETEC ||Criação do banco “sisfinanemprestimo” e projeto “CadastraEndereço” para cadastro de endereços.||
+||13/10/2011||Câmara Municipal||Implementação “Cadastro Endereço”.||
+||14/10/2011 ||Câmara Municipal ||Implementação “Cadastro Endereço”;||
+||19/10/2011 ||Laboratório FAETEC ||Implementação “Cadastro Endereço” ||
+||20/10/2011 ||Câmara Municipal e Laboratório FAETEC||Implementação “Cadastro Endereço”||
+||24/10/2011||EPD||Criação da Classe JLogin do Projeto SisFinanEmprestimo ||
+||25/10/2011 ||Câmara Municipal||Criação da Classe de Conexão com o Banco de dados ||
+||27/10/2011 ||EPD||Implementação na classe de Conexão com o Banco de dados||
+
+
+=2º Marco=
+|| Data || Local || Descrição ||
+||02/11/2011||Casa ||Implementação "CadastraEndereço"||
+||03/11/2011 ||EPD ||Implementação "CadastraEndereço"||
+
+=3º Marco=
+|| Data || Local || Descrição ||
+||14/11/2011 ||Casa ||Criado Tela de Login ||
+||14/11/2011 ||Casa ||Criado Tela de Splash ||
+||14/11/2011 ||Casa ||Criado Tela Principal, tela de Menus ||
+||15/11/2011 ||Casa ||Implementação da Tela de Splash ||
+||15/11/2011 ||Casa ||Criação das Tarefas do 3º Marco ||
+||16/11/2011 ||Casa ||Implementação da Tela Principal ||
+||17/11/2011 ||Câmara Municipal ||Implementação Tela de Login  ||
+||17/11/2011 ||EPD ||Implementação Tela de Login||
+
+=4º Marco=
+|| Data || Local || Descrição ||
+||21/11/2011||Câmara Municipal ||Criação da Tela de Usuário ||
+||23/11/2011 ||EPD ||Implementação Tela de Usuário ||
+||26/11/2011 ||Casa ||Criação Módulos de Endereço - Estado ||
+||26/11/2011 ||Casa ||Implementação Módulo de Endereço - Estado || 
+||27/11/2011 ||Casa ||Implementação Módulo de Endereço - Estado ||
+||27/11/2011 ||Casa ||Criação Tela de Cadastro de Contratos ||
+
+
+= Cláudia Rocha = 
+||07/12/2011 ||Laboratorio FAETEC ||Execução de Realeses||
+== 2ºMarco ==
+
+||Data        ||Local              || Descrição                        ||
+||28/11/2011  ||Laboratório Faetec || Início da Documentação Tcc       ||
+||28/11/2011  ||Laboratório Faetec || Elaboração Mini Mundo            ||
+||28/11/2011  ||Laboratório Faetec || Criação Tabela Cliente           ||
+||28/11/2011  ||Laboratório Faetec || Criação Tabela Contrato          ||
+
+== 3º Marco ==
+
+||Data        ||Local              || Descrição                        ||
+||16/11/2011  ||Laboratório FAETEC ||Revisão novo Minimundo            ||
+||16/11/2011  ||Laboratório FAETEC ||Revisão TABELA CLIENTE SQL        ||
+||16/11/2011  ||Laboratório FAETEC ||Inserido dados tab. cliente       ||
+
+== 1ºMarco ==
+
+||Data       ||Local              || Descrição                         ||
+||29/11/2011 ||Elecomtel LTDA     || Começo elaboração/Tarefas         ||
+||29/11/2011 ||Elecomtel LTDA     || Criação da Logomarca              ||
+||29/11/2011 ||Laboratório FAETEC || Pesquisa de Campo                 ||
+||29/11/2011 ||Laboratório FAETEC || Inicio da elab. do sistema        ||
+||29/11/2011 ||Laboratorio FAETEC || iNICIO DA AUTOMOÇÃO               ||
+||29/11/2011 ||Laboratório FAETEC || Diagnosticar erros                ||
+||29/11/2011 ||Laboratório FAETEC || Escolha das linguagens            ||
+||29/11/2011 ||Laboratório FAETEC || Escolha dos Recursos              || 
+
+== 4ºMarco ==
+
+||Data       ||Local              || Descrição                         ||
+||26/11/2011 ||Residência         || Início elb. da documentação       ||
+||26/11/2011 ||Residência         || Aux. de elab. novas telas         ||
+||27/11/2011 ||Residencia         || Aux. elab. de site                ||
+||27/11/2011 ||Residência         || Revisão do M.E.R.                 ||
+||27/11/2011 ||Residência         || Revisão do D.E.R.                 ||
+||27/11/2011 ||Residência         || Elab. diagrama de atividade       ||
+||27/11/2011 ||Residência         || Conclusão sist.multiusuário       ||
+||27/11/2011 ||Residência         || Concl. proc. real-time            ||
+||28/11/2011 ||Laboratório FAETEC || Início do Projeto Lógico          ||
+||28/11/2011 ||Laboratório FAETEC || Propósito do Sistema              ||
+||29/11/2011 ||Laboratório FAETEC || Propósito Geral do Sistema        ||
+||29/11/2011 ||Laboratório FAETEC || Propósito Específico              ||
+||30/11/2011 ||Laboratório FAETEC || Criação Tela Consulta/Cliente/CPF ||
+||01/12/2011 || Elecomte LTDA     || Implementação Tela/Consulta/CPF   ||

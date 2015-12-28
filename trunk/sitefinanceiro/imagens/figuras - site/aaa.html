@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" href="http://www.econtabilidade.com/wp-content/themes/voodoo-dolly/reset.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://www.econtabilidade.com/wp-content/themes/voodoo-dolly/style.css" media="screen,print" />
+<!--[if IE 6]>
+<style>
+#centerColumn {
+float:left;
+margin:0 10px 0 75px;
+padding:6px 6px 6px 10px;
+width:580px;
+font-size:.9em;
+color:#000000;
+border-left:1px dashed #cccccc;
+}
+</style>
+<![endif]-->
+<title>Simulador | ECont - Empreendimentos Contábeis</title>
+
+<link rel="alternate" type="application/rss+xml" title="ECont &#8211; Empreendimentos Contábeis RSS Feed" href="http://www.econtabilidade.com/?feed=rss2" />
+<link rel="pingback" href="http://www.econtabilidade.com/xmlrpc.php" />
+
+<link rel="alternate" type="application/rss+xml" title="ECont - Empreendimentos Contábeis &raquo; Simulador  Feed de comentários" href="http://www.econtabilidade.com/?feed=rss2&amp;page_id=82" />
+<link rel='stylesheet' id='wp-email-css'  href='http://www.econtabilidade.com/wp-content/plugins/wp-email/email-css.css?ver=2.50' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.econtabilidade.com/wp-includes/js/l10n.js?ver=20101110'></script>
+
+<script type='text/javascript' src='http://www.econtabilidade.com/wp-includes/js/jquery/jquery.js?ver=1.6.1'></script>
+<script type='text/javascript' src='http://www.econtabilidade.com/wp-includes/js/prototype.js?ver=1.6.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.econtabilidade.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.econtabilidade.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='ECont &#8211; Empreendimentos Contábeis' href='http://www.econtabilidade.com' />
+<link rel='prev' title='Revisional' href='http://www.econtabilidade.com/?page_id=72' />
+<link rel='next' title='Salário Família' href='http://www.econtabilidade.com/?page_id=110' />
+<meta name="generator" content="WordPress 3.2.1" />
+
+<!-- All in One SEO Pack 1.6.13.4 by Michael Torbert of Semper Fi Web Design[734,801] -->
+<link rel="canonical" href="http://www.econtabilidade.com/?page_id=82" />
+<!-- /all in one seo pack -->
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			//document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("content-main");
+			if( !content )
+				content = document.getElementById("content");
+			if( content )
+			{
+				addComment.parentNode.removeChild(addComment);
+				content.appendChild(addComment);
+			}
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	font-size:				98%;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://www.econtabilidade.com/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://www.econtabilidade.com/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	/*width: 					100%;	*/
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+ 
+#commentform textarea {
+	width: 97%;
+}
+
+.btc_gravatar {
+	float: right;
+	margin: 3px 3px 4px 4px;
+}
+
+</style>
+
+<!-- Start Of Script Generated By cforms v11.7.1 [Oliver Seidel | www.deliciousdays.com] -->
+<link rel="stylesheet" type="text/css" href="http://www.econtabilidade.com/wp-content/plugins/cforms/styling/cforms.css" />
+<script type="text/javascript" src="http://www.econtabilidade.com/wp-content/plugins/cforms/js/cforms.js"></script>
+<!-- End Of Script Generated By cforms -->
+
+
+	<style type='text/css'>
+	#ifyoulikedthat {
+	margin: 0 0 2em 0; 
+	padding: 0;
+	}
+  #ifyoulikedthat p
+	{
+	margin:0; 
+	padding: 0;
+	font-size: 0.8em;
+	}
+  #ifyoulikedthat p a
+	{
+	margin:0; 
+	padding: 0;
+	font-size: 1em;
+	font-weight: 900;
+	}
+	</style>
+	<script type="text/javascript" src="http://www.econtabilidade.com/index.php?ak_action=wp_grins_js"></script>
+
+<style type="text/css">
+#wp_grins img {
+	cursor: pointer;
+}
+
+</style>
+<!--[if IE]>
+<style type="text/css">
+#wp_grins img {
+	cursor: hand;
+}
+</style>
+<![endif]-->
+	</head>
+<body>
+
+<div id="pageWrap">
+
+<div id="header"> 
+<h1><a href="/">ECont &#8211; Empreendimentos Contábeis</a></h1>
+<p>Solução em contabilidade empresarial. Planejamento tributário, Perícia e Auditoria.</p>
+</div><!--// end #header //-->
+  
+
+<div id="navBar"> 
+<ul>
+<li class="first"><a href="/" title="Home">Home</a></li>
+<li class="page_item page-item-116"><a href="http://www.econtabilidade.com/?page_id=116" title="Veja abaixo algumas matérias que lhe auxiliaram na declaração do Imposto de Renda Pessoa Física.">IRPF</a></li>
+<li class="page_item page-item-72"><a href="http://www.econtabilidade.com/?page_id=72" title="Revisional">Revisional</a></li>
+<li class="page_item page-item-82 current_page_item"><a href="http://www.econtabilidade.com/?page_id=82" title="Simulador">Simulador</a></li>
+<li class="page_item page-item-5"><a href="http://www.econtabilidade.com/?page_id=5" title="Tabelas">Tabelas</a></li>
+<li class="page_item page-item-2"><a href="http://www.econtabilidade.com/?page_id=2" title="Contato">Contato</a></li>
+</ul>
+</div><!--// end #navBar //-->
+    
+
+<div id="container" class="clearfix">
+<div id="centerColumn">
+
+  <h2>Simulador</h2>
+
+<p>dezembro 20th, 2010<!-- by Helenaldo --></p>
+
+	<p><iframe src="http://www.econtabilidade.com/calc_financiamento/financiamento.php" frameborder="0" width="430" height="665"></iframe></p>
+
+
+<p><a href="http://www.econtabilidade.com/?page_id=82#comments">Comments (4)</a></p>
+
+
+<!-- You can start editing here. -->
+
+	<h3 id="comments">4 Responses to &#8220;Simulador&#8221;</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-391">
+			<cite><a href='http://marcosiran.wordpress.com/2010/12/28/codigo-de-simulacao-de-financiamento-em-javascript/' rel='external nofollow' class='url'>Código de Simulação de Financiamento em PHP+JavaScript &laquo; Marcosiran&#039;s Blog</a></cite> Says:
+						<br />
+
+			<small class="commentmetadata"><a href="#comment-391" title="">dezembro 28th, 2010 at 17:11</a> </small>
+
+			<p>[...] Clique aqui para abrir [...]</p>
+
+		</li>
+
+	
+	
+		<li id="comment-1215">
+<img alt='' src='http://0.gravatar.com/avatar/07ca659a1730fefa16c3a648f1a088f1?s=30&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D30&amp;r=G' class='avatar avatar-30 photo' height='30' width='30' />			<cite>claudio de souza ferreira</cite> Says:
+						<br />
+
+			<small class="commentmetadata"><a href="#comment-1215" title="">setembro 29th, 2011 at 9:08</a> </small>
+
+			<p>pago parcela 60x de 1.72800 juros abusivos gotaria de baixar valor obrigado!</p>
+
+		</li>
+
+	
+	
+		<li class="alt" id="comment-1366">
+<img alt='' src='http://0.gravatar.com/avatar/c28dd4e0de95fb16b085a729b7bb1e95?s=30&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D30&amp;r=G' class='avatar avatar-30 photo' height='30' width='30' />			<cite>maria madalena gimnes de lima</cite> Says:
+						<br />
+
+			<small class="commentmetadata"><a href="#comment-1366" title="">outubro 22nd, 2011 at 16:11</a> </small>
+
+			<p>Por obsequio, solicito a viabilidade do cálculo dos indices apresentado</p>
+
+		</li>
+
+	
+	
+		<li id="comment-1378">
+<img alt='' src='http://0.gravatar.com/avatar/6a2adf70a45994cf61217d255b6b774e?s=30&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D30&amp;r=G' class='avatar avatar-30 photo' height='30' width='30' />			<cite><a href='http://ROMILDO' rel='external nofollow' class='url'>Romildo P S</a></cite> Says:
+						<br />
+
+			<small class="commentmetadata"><a href="#comment-1378" title="">outubro 24th, 2011 at 22:37</a> </small>
+
+			<p>ola Boa noite, gostaria de saber se posso usar a base de calculo informada para fins judicias e sem prejuízo para o site, mesmo poque não quero da prejuízo  a neguem desde já meus cinceiros agradecimentos por toda ajuda,     </p>
+<p>Obrigado por vós existir um Forte Abraço a toda equipe</p>
+
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+
+<h3 id="respond">Leave a Reply</h3>
+
+
+<form action="http://www.econtabilidade.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type="hidden" name="comment_post_ID" value="82" />
+</p>
+<input type='hidden' id='comment_reply_ID' name='comment_reply_ID' value='0' /><script src="http://www.econtabilidade.com/?live-comment-preview.js" type="text/javascript"></script><div id="commentPreview"></div>
+
+	<p style="clear: both;" class="subscribe-to-comments">
+
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notificar-me a resposta via e-mail.</label>
+	</p>
+
+
+
+</form>
+
+
+</div><!--// end #centerColumn //-->
+
+<div id="leftColumn">
+<h2>01 Receita Federal do Brasil</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.receita.fazenda.gov.br/" target="_blank">.Home</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/Certidoes/PessoaFisica.htm">CND PF</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/Certidoes/PessoaJuridica.htm">CND PJ</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp">Consulta CNPJ</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/aplicacoes/atcta/cpf/fisica.htm">Consulta CPF</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/CodigoReceita/default.asp">Consulta de código de DARF</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/fcpj/consulta.asp">Consulta pedido CNPJ</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/Download/ProgramasPF.htm">Download Progrmas PF</a></li>
+
+<li><a href="http://www.receita.fazenda.gov.br/Download/ProgramasPJ.htm">Download Progrmas PJ</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/GuiaContribuinte/Formularios.htm">Formulários</a></li>
+<li><a href="http://www.receita.fazenda.gov.br/Principal/Parcelamento.htm">Parcelamentos</a></li>
+<li><a href="http://www8.receita.fazenda.gov.br/SimplesNacional/">Simples Nacional</a></li>
+
+	</ul>
+
+<h2>02 INSS</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.inss.gov.br/">.Home</a></li>
+
+<li><a href="http://www.dataprev.gov.br/sal/SalEmpresa2.htm">Atualização de Contribuições</a></li>
+<li><a href="http://www.dataprev.gov.br/servicos/cnd1.htm">CND Empregador</a></li>
+<li><a href="http://www.dataprev.gov.br/servicos/cadint/cadint.html">Inscrição Online (NIT)</a></li>
+
+	</ul>
+
+<h2>03 CEF</h2>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.caixa.gov.br/">.Home</a></li>
+<li><a href="http://cmt.caixa.gov.br/cse">Aplicativo CNS</a></li>
+
+<li><a href="https://webp.caixa.gov.br/empresa/EditalFGTS/005/001/fgepw001.asp">Coeficientes SEFIP</a></li>
+<li><a href="https://webp.caixa.gov.br/cidadao/Crf/FgeCfSCriteriosPesquisa.asp">CRF</a></li>
+<li><a href="http://www1.caixa.gov.br/download/index.asp">Download GRRF</a></li>
+<li><a href="http://www1.caixa.gov.br/download/index.asp">Download SEFIP</a></li>
+<li><a href="http://sindical.caixa.gov.br/sitcs_internet/contribuinte/login/login.do">GRCSU &#8211; Guia</a></li>
+
+	</ul>
+
+</div><!--// end #leftColumn //--><div id="rightColumn">
+
+			<div class="textwidget"><BR><a href="http://www.econtabilidade.com/?p=129"><img border="0"  src="http://www.econtabilidade.com/imagens/banner-200.png" /></a></div>
+		</div><!--// end #rightColumn //-->
+<!-- Start of Zopim Live Chat Script -->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=
+z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o
+){z.set._.push(o)};$.setAttribute('charset','utf-8');$.async=!0;z.set.
+_=[];$.src=('https:'==d.location.protocol?'https://ssl':'http://cdn')+
+'.zopim.com/?VjlDdmhOP8SpjWG2tvOKqLtwog9KlHgl';$.type='text/java'+s;z.
+t=+new Date;z._=[];e.parentNode.insertBefore($,e)})(document,'script')
+</script>
+<!-- End of Zopim Live Chat Script -->
+
+
+<script type="text/javascript"> 
+
+$zopim( function() {
+
+$zopim.livechat.button.setPosition('br');
+$zopim.livechat.window.setTheme('plastic');
+$zopim.livechat.bubble.setTitle('Perguntas?');
+$zopim.livechat.bubble.setText('Clique aqui para falar conosco!');
+})</script> </div><!--// end #container //-->
+
+  
+
+<div id="footer"> 
+
+<p>Copyright, 2011 ECont &#8211; Empreendimentos Contábeis &nbsp;&#8226;&nbsp; </p>
+
+</div><!--// end #footer //-->
+
+
+
+</div><!--// end #pageWrap //-->
+
+<script type='text/javascript' src='http://www.econtabilidade.com/wp-includes/js/jquery/ui.core.js?ver=1.8.12'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var emailL10n = {
+	ajax_url: "http://www.econtabilidade.com/wp-content/plugins/wp-email/wp-email.php",
+	max_allowed: "5",
+	text_error: "The Following Error Occurs:",
+	text_name_invalid: "- Your Name is empty/invalid",
+	text_email_invalid: "- Your Email is empty/invalid",
+	text_remarks_invalid: "- Your Remarks is invalid",
+	text_friend_names_empty: "- Friend Name(s) is empty",
+	text_friend_name_invalid: "- Friend Name is empty/invalid: ",
+	text_max_friend_names_allowed: "- Maximum 5 Friend Names allowed",
+	text_friend_emails_empty: "- Friend Email(s) is empty",
+	text_friend_email_invalid: "- Friend Email is invalid: ",
+	text_max_friend_emails_allowed: "- Maximum 5 Friend Emails allowed",
+	text_friends_tally: "- Friend Name(s) count does not tally with Friend Email(s) count",
+	text_image_verify_empty: "- Image Verification is empty"
+};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.econtabilidade.com/wp-content/plugins/wp-email/email-js.js?ver=2.50'></script>
+
+</body>
+
+</html>
+
+ 

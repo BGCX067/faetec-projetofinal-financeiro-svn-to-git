@@ -1,0 +1,391 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--INICIO CODIGO DE CALCULO DE FINANCIAMENTO 
+by Helenaldo e Marcos Iran
+-->
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="jquery.form.js"></script>
+<script>
+function numero(campo){
+    var digits="0123456789.,"
+    var campo_temp 
+    for (var i=0;i<campo.value.length;i++){
+      campo_temp=campo.value.substring(i,i+1)    
+      if (digits.indexOf(campo_temp)==-1){
+            campo.value = campo.value.substring(0,i);
+            break;
+       }
+    }
+}
+
+function formataValor(campo){
+	campo.value = filtraCampo(campo);
+	vr = campo.value;
+	tam = vr.length;
+	if ( tam <= 2 ){ 
+ 		campo.value = vr ; }
+ 	if ( (tam > 2) && (tam <= 5) ){
+ 		campo.value = vr.substr( 0, tam - 2 ) + ',' + vr.substr( tam - 2, tam ) ; }
+ 	if ( (tam >= 6) && (tam <= 8) ){
+ 		campo.value = vr.substr( 0, tam - 5 ) + '.' + vr.substr( tam - 5, 3 ) + ',' + vr.substr( tam - 2, tam ) ; }
+ 	if ( (tam >= 9) && (tam <= 11) ){
+ 		campo.value = vr.substr( 0, tam - 8 ) + '.' + vr.substr( tam - 8, 3 ) + '.' + vr.substr( tam - 5, 3 ) + ',' + vr.substr( tam - 2, tam ) ; }
+ 	if ( (tam >= 12) && (tam <= 14) ){
+ 		campo.value = vr.substr( 0, tam - 11 ) + '.' + vr.substr( tam - 11, 3 ) + '.' + vr.substr( tam - 8, 3 ) + '.' + vr.substr( tam - 5, 3 ) + ',' + vr.substr( tam - 2, tam ) ; }
+ 	if ( (tam >= 15) && (tam <= 18) ){
+ 		campo.value = vr.substr( 0, tam - 14 ) + '.' + vr.substr( tam - 14, 3 ) + '.' + vr.substr( tam - 11, 3 ) + '.' + vr.substr( tam - 8, 3 ) + '.' + vr.substr( tam - 5, 3 ) + ',' + vr.substr( tam - 2, tam ) ;}
+}
+
+function filtraCampo(campo){
+	var s = "";
+	var cp = "";
+	vr = campo.value;
+	tam = vr.length;
+	for (i = 0; i < tam ; i++) {  
+		if (vr.substring(i,i + 1) != "/" && vr.substring(i,i + 1) != "-" && vr.substring(i,i + 1) != "."  && vr.substring(i,i + 1) != "," ){
+		 	s = s + vr.substring(i,i + 1);}
+	}
+	campo.value = s;
+	return cp = campo.value
+}
+
+function sendForm(formid,div) {
+	$('#loading-fin').html('Calculando...');
+	jQuery("#"+formid).ajaxSubmit(function(resposta){ jQuery('#'+div).html(resposta); $('#loading-fin').html(''); document.getElementById('calculo_fin2').style.display = 'block';});
+}
+
+function calcular_fin(){
+	var passou = true;
+	
+	if($('#valor').val()==0 && passou){
+		alert('Preencha o VALOR para o calculo!')
+		document.getElementById('valor').focus();
+		passou = false;
+	}
+	
+	if($('#quant1').val()==0 && passou){
+		alert('Preencha a quantidade de prestações!')
+		document.getElementById('quant1').focus();
+		passou = false;
+	}
+	
+	if(!document.getElementById('se_taxa').checked && $('#taxa').val()=='0' && passou){
+		alert('Preencha o valor da TAXA para o calculo!')
+		document.getElementById('taxa').focus();
+		passou = false;
+	}
+	
+	if(passou){
+		document.getElementById('calculo_fin').style.display = 'none';
+		sendForm('form1_finan','calculo_fin2');
+	}
+}
+
+function voltar_financiamento(){
+	document.getElementById('calculo_fin').style.display = 'block';
+	document.getElementById('calculo_fin2').style.display = 'none';
+}
+
+function taxa_atual(){
+	if(document.getElementById('se_taxa').checked){
+		document.getElementById('taxa').readOnly = true;
+		document.getElementById('taxa').value = '1.40';
+	}else{
+		document.getElementById('taxa').readOnly = false;
+		document.getElementById('taxa').value = '0';
+	}
+}
+</script> 
+
+<style>
+	.caixa_header_fin{
+		width:399px; background-color:#4F81BD; height:25px; font-size:18px;
+	}
+	
+	.caixa_header_fin2{
+		width:399px; background-color:#4F81BD; height:25px; font-size:12px;
+	}
+	
+	.caixa_2_fin{
+		width:392px; background-color:#4F81BD; padding:3px;font-size:12px;
+	}
+	
+	.input_text_fin{
+		text-align:center; width:300px; background-color:#EDEDFA; font-family:Arial, Helvetica, sans-serif; color:#039; border:1px solid #CCC;
+	}
+</style>
+<div id="loading-fin"></div>
+
+<div id="calculo_fin2"></div>
+<div id="calculo_fin">
+
+<form action="financiamento.php" method="post" id="form1_finan" name="form1_finan">
+<!-- INICIO VALOR DO FINANCIAMENTO -->
+
+<div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+   
+    <div class="caixa_header_fin" align="center">
+    	<strong>VALOR FINANCIADO</strong>
+    </div>
+    
+    <div align="center" style="width:375px; margin:5px;">
+    	<input name="valor" type="text" class="input_text_fin" id="valor" onkeyup="numero(this);formataValor(this);" value="0" maxlength="20" />
+  </div>
+    
+    <div class="caixa_2_fin" align="center">
+    	Informe o valor do principal, sem juros e sem taxas, sem serviços de terceiros, valor do bem a vista.
+    </div>
+
+    
+</div>
+<!-- FIM VALOR DO FINANCIAMENTO -->
+<div style="height:15px;"></div>
+
+<!-- INICIO QUANTIDADE DE PRESTA??ES -->
+<div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+   
+    <div class="caixa_header_fin" align="center">
+
+    	<strong>QUANTIDADE DE PRESTAÇÕES</strong>
+    </div>
+    
+    <div align="center" style="width:375px; margin:5px;">
+
+    	<input name="quant1" type="text" id="quant1" class="input_text_fin" onkeyup="numero(this);" maxlength="20" />
+    </div>
+    
+    <div class="caixa_2_fin" align="center">
+    	Quantidade total em que foi dividido ou deseja dividir o financiamento.
+    </div>
+    
+
+</div>
+<!-- FIM QUANTIDADE DE PRESTA??ES -->
+
+<div style="height:15px;"></div>
+
+<!-- INICIO PRESTA??ES J? PAGAS -->
+<div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+
+   
+    <div class="caixa_header_fin" align="center">
+    	<strong>PRESTAÇÕES JÁ PAGAS</strong>
+    </div>
+    
+    <div align="center" style="width:375px; margin:5px;">
+    	<input name="quant2" type="text" id="quant2" class="input_text_fin" onkeyup="numero(this);" value="0" maxlength="20" />
+    </div>
+    
+    <div class="caixa_2_fin" align="center">
+    	Informe apenas a quantidade de prestaçoes que você já pagou, "0" para nenhuma prestação paga.
+    </div>
+
+    
+</div>
+<!-- FIM PRESTA??ES J? PAGAS -->
+
+<div style="height:15px;"></div>
+
+<!-- INICIO TAXA DE JUROS-->
+<div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+   
+    <div class="caixa_header_fin" align="center">
+
+    	<strong>TAXA DE JUROS MENSAL</strong>
+    </div>
+    
+    <div align="center" style="width:375px; margin:5px;">
+
+    	<input name="taxa" type="text" id="taxa" class="input_text_fin" onkeyup="numero(this);" value="0" maxlength="20" />
+    </div>
+    
+    <div class="caixa_2_fin" align="center">
+    	<label><input name="se_taxa" type="checkbox" value="s" id="se_taxa" onchange="taxa_atual()" />
+        Marque aqui caso você não saiba, usaremos a taxa média de mercado de 1,40% a.m.</label>
+
+    </div>
+    
+</div>
+<!-- FIM TAXA DE JUROS MENSAL-->
+
+<div style="height:15px;"></div>
+
+<!-- INICIO VALOR PRESTA??O-->
+<div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+   
+    <div class="caixa_header_fin" align="center">
+    	<strong>VALOR DA PRESTAÇÃO</strong>
+    </div>
+
+    
+    <div align="center" style="width:375px; margin:5px;">
+    	<input name="valor_prestacao" type="text" id="valor_prestacao" class="input_text_fin" onkeyup="numero(this);formataValor(this);" value="0" maxlength="20" />
+
+    </div>
+    
+    <div class="caixa_2_fin" align="center">
+    	Informe o valor de sua prestação contratada, Deixe zero caso você ainda não tenha feito o financiamento e deseje saber o valor da prestação.
+    </div>
+    
+</div>
+<div style="width:399px;" align="right">
+  <input name="acao" type="hidden" id="acao" value="calcular">
+	<input name="CALCULAR1" type="button" id="CALCULAR1" value="CALCULAR" onClick="calcular_fin()" />
+</div>
+<!-- FIM TAXA VALOR PRESTA??O-->
+</form>
+
+</div>
+
+<!-- INICIO BLOCOS RESULTADOS -->
+<div id="tipo1" style="display:none;" >
+
+	<div style="width:399px;">--------------------------RESULTADO--------------------------</div>
+    <!-- INICIO presta??o-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Sua prestação a juros simples é de:</strong>
+
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_prestacao_simples" type="text" class="input_text_fin" id="valor_prestacao_simples" value="0,00" maxlength="20" readonly="readonly" />
+
+        </div>
+    </div>
+    <!-- FIM presta??o-->
+    <div style="height:15px;"></div>
+    <!-- INICIO juros simples-->
+
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>O total do financiamento a juros simples é de:</strong>
+
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_juros_simples" type="text" class="input_text_fin" id="valor_juros_simples" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+    </div>
+
+    <!-- FIM juros simples-->
+    <div style="height:15px;"></div>
+    <!-- INICIO economia-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Sua economia será de:</strong>
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+
+            <input name="valor_economia" type="text" class="input_text_fin" id="valor_economia" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+        
+        <div class="caixa_2_fin" align="center" id="porcento1_valor">
+            0,00%
+        </div>          
+        
+    </div>
+
+    <!-- FIM economia-->
+   <div style="height:15px;"></div>
+    <!-- INICIO ja pagou a mais-->
+
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Você já pagou a mais:</strong>
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_pagoamais" type="text" class="input_text_fin" id="valor_pagoamais" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+    </div>
+
+    <!-- FIM ja pagou a mais-->
+    <div style="height:15px;"></div>
+    <!-- INICIO parcelas restantes-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Suas prestações restantes diluído do valor pago a maior será de:</strong>
+
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+
+            <input name="valor_parcela_ficara" type="text" class="input_text_fin" id="valor_parcela_ficara" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+    </div>
+    <!-- FIM parcelas restantes--> 
+</div>
+<div id="tipo2" style="display:none;" >
+   <div style="width:399px;">--------------------------RESULTADO--------------------------</div>
+
+   <!-- INICIO presta??o-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Sua prestação a juros simples é de:</strong>
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_prestacao_simples2" type="text" class="input_text_fin" id="valor_prestacao_simples2" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+
+    </div>
+    <!-- FIM presta??o-->
+
+    <div style="height:15px;"></div>
+   
+   	<!-- INICIO presta??o-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+            <strong>Sua prestação a juros compostos pela tabela PRICE é de:</strong>
+        </div>
+
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_prestacao_compostos" type="text" class="input_text_fin" id="valor_prestacao_compostos" value="0,00" maxlength="20" readonly="readonly" />
+
+        </div>
+    </div>
+    <!-- FIM presta??o-->
+    <div style="height:15px;"></div>
+   
+    <!-- INICIO economia-->
+    <div style="font-family:Arial, Helvetica, sans-serif; color:#FFF; width:399px; border:1px solid #000;" align="center">
+       
+        <div class="caixa_header_fin2" align="center">
+
+            <strong>Sua economia será de:</strong>
+
+        </div>
+        
+        <div align="center" style="width:375px; margin:5px;">
+            <input name="valor_economia2" type="text" class="input_text_fin" id="valor_economia2" value="0,00" maxlength="20" readonly="readonly" />
+        </div>
+        
+        <div class="caixa_2_fin" align="center" id="porcento2_valor">
+            0,00%
+        </div>          
+        
+    </div>
+
+    <!-- FIM economia-->
+
+<!--FIM BLOCOS RESULTADOS -->
+</div>	
+	Base de Cálculo: 	  	 
+  	
+Decreto nº 22.626/33, que proíbe terminantemente a capitalização composta de juros, orientação que consta da Símula nº 121 do STF: "é vedada a capitalização de juros, ainda que expressamente convencionada".
+
+
+<!--
+by Helenaldo e Marcos iran
+FIM CODIGO DE CALCULO DE FINANCIAMENTO -->

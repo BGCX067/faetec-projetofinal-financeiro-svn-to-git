@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/financeiro_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<style type="text/css">
+body{
+	padding: 25px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	background-image: url();
+}
+
+/*^'^ Navigation Structure ^'^*/
+.nav-container-outer{
+background: #990000;
+padding: 0px;
+height: 74px;
+background: url(imagens/nav-bg.jpg);
+}
+.float-left{
+float: left;
+}
+.float-right{
+float: right;
+}
+.nav-container .divider{
+display:block;
+font-size:1px;
+border-width:0px;
+border-style:solid;
+}
+.nav-container .divider-vert{
+float:left;
+width:0px;
+display: none;
+}
+.nav-container .item-secondary-title{
+display:block;
+cursor:default;
+white-space:nowrap;
+}
+.clear{
+font-size:1px;
+height:0px;
+width:0px;
+clear:left;
+line-height:0px;
+display:block;
+float:none;
+}
+.nav-container{
+position:relative;
+zoom:1;
+margin: 0 auto;
+}
+.nav-container a, .nav-container li{
+float:left;
+display:block;
+white-space:nowrap;
+}
+.nav-container div a, .nav-container ul a, .nav-container ul li{
+float:none;
+}
+.nav-container ul{
+left:-10000px;
+position:absolute;
+}
+.nav-container, .nav-container ul{
+list-style:none;
+padding:0px;
+margin:0px;
+}
+.nav-container li a{
+float:none
+}
+.nav-container li{
+position:relative;
+}
+.nav-container ul{
+z-index:10;
+}
+.nav-container ul ul{
+z-index:20;
+}
+.nav-container ul ul ul{
+z-index:30;
+}
+.nav-container ul ul ul ul{
+z-index:40;
+}
+.nav-container ul ul ul ul ul{
+z-index:50;
+}
+li:hover>ul{
+left:auto;
+}
+#nav-container ul {
+top:100%;
+}
+#nav-container ul li:hover>ul{
+top:0px;
+left:100%;
+}
+
+/*^'^ Primary Items ^'^*/	
+#nav-container a{	
+padding:7px 17px 7px 18px;
+margin: 10px 0px 0px 0px;
+color: #FFFFFF;
+font-family: Trebuchet MS, Arial, sans-serif, Helvetica;
+font-size:14px;
+text-decoration:none;
+font-weight: bold;
+background: url(imagens/item-primary-bg.gif);
+background-repeat: no-repeat;
+background-position: top;
+}
+
+#nav-container a:hover{
+color: #6C3600;
+background: url(imagens/item-primary-bg.gif);
+background-repeat: no-repeat;
+background-position: center;
+}
+
+/*^'^ Secondary Items Container ^'^*/	
+#nav-container div, #nav-container ul{	
+padding:10px 4px 10px 4px;
+margin:0px 0px 0px 0px;
+background: url(imagens/item-secondary-container-bg.jpg);
+background-repeat: repeat-x;
+background-color: #FF9900;
+border-bottom: 1px solid #CA6500;
+}
+
+/*^'^ Secondary Items ^'^*/	
+#nav-container div a, #nav-container ul a{	
+padding:3px 10px 3px 6px;
+background-color: #FFFFFF;
+background: url(imagens/item-secondary-bg.jpg);
+background-repeat: no-repeat;
+background-position: 0px 22px;
+font-size:11px;
+border-width:0px;
+border-style:none;
+margin: 0px 0px 0px 0px;
+width: 149px;
+}
+
+/*^'^ Secondary Items Hover State ^'^*/	
+#nav-container div a:hover, #nav-container ul a:hover{	
+background-color: #FFFFFF;
+background: url(imagens/item-secondary-bg.jpg);
+background-repeat: no-repeat;
+color:#CC0000;
+}
+
+/*^'^ Secondary Item Titles ^'^*/	
+#nav-container .item-secondary-title{	
+cursor:default;
+padding:4px 0px 3px 7px;
+color: #6C3600;
+font-family: Arial, Trebuchet MS, Arial, sans-serif, Helvetica;
+font-size:11px;
+/* background: url(imagens/item-secondary-title-bg.jpg); */
+background-repeat: no-repeat;
+font-weight:bold;
+}
+
+/*^'^ Horizontal Dividers ^'^*/	
+#nav-container .divider-horiz{	
+border-top-width:1px;
+margin:5px 5px;
+border-color: #C16100;
+}
+
+/*^'^ Vertical Dividers ^'^*/	
+#nav-container .divider-vert{	
+border-left-width:1px;
+height:15px;
+margin:4px 2px 0px 2px;
+border-color:#AAAAAA;
+}
+#form1 p {
+	font-family: "Palatino Linotype";
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>financeiro_template</title>
+<link href="css/texto.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="100%" height="957" Border="1">
+  <tr>
+    <td height="128" colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="67" colspan="2"><div class="nav-container-outer">
+   <img src="imagens/nav-bg-l.jpg" alt="" class="float-left" />
+   <img src="imagens/nav-bg-r.jpg" alt="" class="float-right" />
+   <ul id="nav-container" class="nav-container">
+
+      <li><a class="item-primary" href="#">Página Inicial</a>         </li>
+   
+      <li><span class="divider divider-vert" ></span></li>
+      <li><a class="item-primary" href="#"> + Clientes</a>
+   
+         <ul style="width:150px;">
+         <li><a href="#">Aposentados</a></li>
+         <li><a href="#">Pensionistas</a></li>
+         </ul></li>
+   
+      <li><span class="divider divider-vert" ></span></li>
+      <li><a class="item-primary" href="#">+ Empresas</a>
+   
+         <ul style="width:150px;">
+         <li><a href="#">SoftwarePlus</a></li>
+         <li><a href="#">MagicDriver</a></li>
+         <li><a href="#">GreatFX</a></li>
+
+         <li><a href="#">SampleSoft</a></li>
+         <li><a href="#">UnDoIt</a></li>
+         <li><a href="#">100% CSS Menu</a></li>
+         <li><a href="#;">With Cross-Browser</a></li>
+         <li><a href="#;">Dropdowns</a></li>
+         <li><a href="#;">Absolutely NO Javascript</a></li>
+
+         <li><a href="#;">Being Used On</a></li>
+         <li><a href="#;">These Menus</a></li>
+         <li><span class="divider divider-horiz" ></span></li>
+         <li><a href="#;">Example Of a Divider</a></li>
+         <li><a href="#;">With No Title</a></li>
+         </ul></li>
+   
+      <li><span class="divider divider-vert" ></span></li>
+
+      <li><a class="item-primary" href="#">Empréstimos</a>
+   
+         <ul style="width:150px;">
+         <li><span class="item-secondary-title" >Title For Links</span></li>
+         <li><a href="#">These Links Still Appear</a></li>
+         <li><a href="#">Just Like The Others</a></li>
+         <li><a href="#">Even When Under A Title</a></li>
+
+         <li><span class="divider divider-horiz" ></span></li>
+         <li><span class="item-secondary-title" >Title After Divider</span></li>
+         <li><a href="#">Once Again...</a></li>
+         <li><a href="#">These Links Still Appear</a></li>
+         <li><a href="#">Just Like The Others</a></li>
+         <li><a href="#">Even When Under A Title</a></li>
+         </ul></li>
+   
+      <li><span class="divider divider-vert" ></span></li>
+      <li><a class="item-primary" href="#;">Contato</a>
+   
+         <ul style="width:150px;">
+         <li><span class="item-secondary-title" >Title For Links</span></li>
+         <li><a href="#">These Links Still Appear</a></li>
+         <li><a href="#">Just Like The Others</a></li>
+
+         <li><a href="#">Even When Under A Title</a></li>
+         <li><span class="divider divider-horiz" ></span></li>
+         <li><span class="item-secondary-title" >Title After Divider</span></li>
+         <li><a href="#">Once Again...</a></li>
+         <li><a href="#">These Links Still Appear</a></li>
+         <li><a href="#">Just Like The Others</a></li>
+
+         <li><a href="#">Even When Under A Title</a></li>
+         </ul></li>
+         
+       <li><span class="divider divider-vert" ></span></li>
+      <li><a class="item-primary" href="#;">A Empresa</a>
+   
+         <ul style="width:150px;">
+         <li><span class="item-secondary-title" >Title For Links</span></li>
+         <li><a href="#">These Links Still Appear</a></li>
+
+         <li><a href="#">Just Like The Others</a></li>
+         <li><a href="#">Even When Under A Title</a></li>
+         <li><span class="divider divider-horiz" ></span></li>
+         <li><span class="item-secondary-title" >Title After Divider</span></li>
+         <li><a href="#">Once Again...</a></li>
+         <li><a href="#">These Links Still Appear</a></li>
+
+         <li><a href="#">Just Like The Others</a></li>
+         <li><a href="#">Even When Under A Title</a></li>
+         </ul></li>
+   <li class="clear">&nbsp;</li></ul>
+</div></td>
+  </tr>
+  <tr>
+    <td width="327" height="186"><form id="form2" name="form2" method="post" action="">
+      <p align="center">Consulta por CPF</p>
+      <p align="center">
+        <label>
+        CPF:
+        <input type="text" name="textfield3" id="textfield3" />
+        </label>
+      </p>
+      <p align="center">
+        <label>
+        <input type="submit" name="button2" id="button2" value="Enviar" />
+        </label>
+      </p>
+    </form>    </td>
+    <td width="693" rowspan="3"><!-- InstanceBeginEditable name="editar1" -->TESTE SITEeditar2<!-- InstanceEndEditable --></td>
+  </tr>
+  <tr>
+    <td height="151" bgcolor="#F0F0F0">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="186">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><form id="form1" name="form1" method="post" action="">
+      <p>
+        <label for="textfield"></label>
+        Login:
+        <input type="text" name="textfield" id="textfield" />
+      </p>
+      <p>
+        <label for="textfield2"></label>
+        Senha:
+        <input type="text" name="textfield2" id="textfield2" />
+      </p>
+      <p>
+        <input type="submit" name="button" id="button" value="Submit" />
+      </p>
+    </form></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+  	<th height="45" colspan="2" bgcolor="#003366"><pre class="Texto">DESENVOLVIDO POR UNDERLINE SYSTEMS</pre></th>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

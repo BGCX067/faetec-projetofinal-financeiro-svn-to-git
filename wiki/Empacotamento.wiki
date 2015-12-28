@@ -1,0 +1,7 @@
+Arquivos Necessários para Empacotamento:
+
+♦ JRE - Java Runtime 6.0 ou Superior<br>
+♦ Servidor Local (WAMP / XAMPP)<br>
+♦ Sistema Compilado e suas Bibliotecas (Jar's)<br>
+♦ Arquivo de Banco de Banco de Dados exportado (Arquivo SQL)<br>
+♦ Arquivo Leia-Me para Instrução de Uso para Usuário<br>
